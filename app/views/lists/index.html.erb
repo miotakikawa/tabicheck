@@ -1,0 +1,20 @@
+<h1>持ち物リストを作成</h1>
+<div>
+  <%= form_with model: @list, local: true do |f| %>
+  <div class="field">
+        <%= f.label :place, "行き先" %>
+        <%= f.text_field :place, autofocus: true %>旅行
+  </div>
+  <div class="field">
+        <%= f.label :date, "宿泊日数" %>
+        <%= f.text_field :date, autofocus: true %>泊
+  </div>
+  <div class="field">
+　      <%= f.label :gender, :man %>
+  　　　　<%= f.radio_button :gender, 1 %>
+  　　　　<%= f.label :gender, :woman %>
+        <%= f.radio_button :gender, 2 %>
+  </div>
+
+  <% end %>
+</div>
