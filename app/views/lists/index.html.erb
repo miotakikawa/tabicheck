@@ -10,11 +10,17 @@
         <%= f.text_field :date, autofocus: true %>泊
   </div>
   <div class="field">
-　      <%= f.label :gender, :man %>
-  　　　　<%= f.radio_button :gender, 1 %>
-  　　　　<%= f.label :gender, :woman %>
+        <%= f.label :gender, :man %>
+      　<%= f.radio_button :gender, 1 %>
+      　<%= f.label :gender, :woman %>
         <%= f.radio_button :gender, 2 %>
   </div>
-
+  <div class="field">
+        <%= f.label :purpouse %>
+  </div>
+  <div class="field">
+        <%= f.label :weather %>
+  </div>
+  <%= f.submit "リスト作成", class:"btn btn-success" %>
   <% end %>
 </div>
