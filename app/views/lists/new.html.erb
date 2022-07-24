@@ -1,0 +1,72 @@
+<div class="container">
+<div class="alert col-5 d-flex" role="alert">
+ <strong>持ち物リストを作成</strong>
+</div>
+</div>
+ <div>
+  <%= form_with model: @list, url: lists_path, local: true do |f| %>
+  <table width="50%" class="table table-borderless">
+   <tbody>
+   <tr>
+    <td>行き先</td>
+    <td><%= f.text_field :place, autofocus: true %>旅行</td>
+   </tr>
+   <tr>
+    <td> 宿泊日数</td>
+    <td><%= f.select :date, (1..14).to_a, class: 'sample' %>泊</td>
+   </tr>
+
+   <tr>
+     <td>性別</td>
+      <td>
+      <%= f.radio_button :gender, 1 %>
+      <%= f.label :gender, "男性" %>
+      <%= f.radio_button :gender, 2 %>
+      <%= f.label :gender, "女性" %>
+      </td>
+   </tr>
+   <tr>
+     <td>何をしますか？</td>
+     　<td>
+     　  <%= f.radio_button :purpouse, 1  %>
+        <%= f.label :purpouse,"温泉" %><br>
+        <%= image_tag "onsen.png" %>
+       </td>
+       <td>
+         <%= f.radio_button :purpouse, 2  %>
+         <%= f.label :purpouse,"プール" %><br>
+         <%= image_tag "pool.png" %>
+       </td>
+   </tr>
+
+   <tr>
+    <td>天気予報は？</td>
+       <td>
+        <%= f.radio_button :weather, 1  %>
+         <%= f.label :weather,"晴れ" %><br>
+         <%= image_tag "sun.png" %>
+       </td>
+       <td>
+        <%= f.radio_button :weather, 2  %>
+         <%= f.label :weather,"くもり" %><br>
+         <%= image_tag "cloud.png" %>
+        </td>
+        <td>
+        <%= f.radio_button :weather, 3  %>
+         <%= f.label :weather,"雨" %><br>
+         <%= image_tag "rain.png" %>
+        </td>
+        <td>
+        <%= f.radio_button :weather, 4  %>
+         <%= f.label :weather,"雪" %><br>
+         <%= image_tag "cold.png" %>
+        </td>
+    </tr>
+    </tbody>
+    </table>
+
+   <div class="text-center">
+   <span><%= f.submit "リスト作成", class:"btn btn-success" %></span>
+   </div>
+   <% end %>
+ </div>

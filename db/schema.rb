@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2022_07_22_112641) do
 
   create_table "lists", force: :cascade do |t|
     t.string "place"
-    t.string "date"
+    t.integer "date"
     t.integer "gender"
     t.integer "purpouse"
     t.integer "weather"
