@@ -1,7 +1,182 @@
 <div class="container">
- <div class="alert alert-dark col-5 d-flex" role="alert">
-    <strong><%= list.place %>旅行の持ち物リスト</strong>
-    
-    
+ <div class="alert col-5 d-flex" role="alert">
+    <h4><%= @list.place %>旅行の持ち物リスト</h4>
  </div>
 </div>
+<% if @list.errors.any? %>
+  <% @list.errors.full_messages.each do |message| %>
+    <%= message %>
+  <% end %>
+ <% end %>
+
+<%= form_with model: @list, local: true do |f| %>
+ <div class="container">
+  <div class="row" >
+    <div class="col">
+      <strong>貴重品類</strong><br>
+      <table>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "財布" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "健康保険証" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "運転免許証" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "鍵" %><br>
+       </tr>
+      </table>
+    </div>
+    <div class="col">
+      <strong>電子機器</strong><br>
+      <table>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "携帯" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "携帯充電器" %><br>
+       </tr>
+       <!--<tr>-->
+       <!--<%= f.check_box :bag %>-->
+       <!--<%= f.label :bag, "運転免許証" %><br>-->
+       <!--</tr>-->
+       <!--<tr>-->
+       <!--<%= f.check_box :bag %>-->
+       <!--<%= f.label :bag, "鍵" %><br>-->
+       <!--</tr>-->
+      </table>
+    </div>
+    <div class="col">
+      <strong>日用品</strong><br>
+      <table>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "マスク" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "ティッシュ" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "常備薬" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "消毒グッズ" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "メガネ" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "コンタクト" %><br>
+       </tr>
+      </table>
+    </div>
+    <div class="col">
+      <strong><%= @list.date %>泊分の衣類</strong><br>
+      <table>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "下着" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "着替え（上下）" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "靴下" %><br>
+       </tr>
+        <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "ハンカチ" %><br>
+       </tr>
+      </table>
+    </div>
+  </div>
+ </div><br><br>
+ <div class="container">
+  <div class="row" >
+    <div class="col">
+      <strong>化粧品類</strong><br>
+      <% if :gender == 1 %>
+      <table>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "髭剃り" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "歯ブラシ" %><br>
+       </tr>
+      </table>
+      <% else :gender == 2 %>
+       <table>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "メイク用品" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "歯ブラシ" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "化粧水・乳液" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "日焼け止め" %><br>
+       </tr>
+      </table>
+      <% end %>
+    </div>
+    <div class="col">
+      <strong>その他必要なもの</strong><br>
+      <% if :purpouse == 1 %>
+      <table>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "タオル" %><br>
+       </tr>
+      </table>
+      <% else :purpouse == 2 %>
+      <table>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "水着" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "タオル" %><br>
+       </tr>
+      </table>
+      <% end %>
+    </div>
+    <div class="col">
+      <strong></strong><br>
+      <table>
+      </table>
+    </div>
+    <div class="col">
+      <strong></strong><br>
+      <table>
+      </table>
+    </div>
+  </div><br><br>
+ </div>
+  <div class="text-center">
+   <span><%= f.submit "準備完了", class:"btn btn-success" %></span>
+   </div>
+ <% end %>

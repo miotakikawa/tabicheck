@@ -6,7 +6,7 @@ class ListsController < ApplicationController
   def create
     @list = List.new(list_params)
     @list.save
-    redirect_to lists_path(@list.id)
+    redirect_to list_path(@list.id)
   end
 
   def show

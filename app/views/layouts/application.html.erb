@@ -11,16 +11,43 @@
 
   <body>
     <header>
-    <div class="container px-lg-0">
-    <div class="row">
-    <div class="col-md-3 pull-right d-flex align-items-center">
-    <h3>タビチェック</h3>
-    </div>
-    <div class="col-md-9">
+      <h1 class="headline"> Tabicheck </h1>
+    </header>
 
    <nav class="navbar navbar-light bg-white" >
+    
     <div class="navbar-right">
-      
+    <button type="button" class="btn btn-outline-secondary" >
+      <%= link_to "作品一覧" %>
+     </button>
+     <button type="button" class="btn btn-outline-secondary" >
+      <%= link_to "口コミ投稿"%>
+     </button>
+     <button type="button" class="btn btn-outline-secondary" >
+      <%= link_to "ログアウト", logout_path, method: :delete %>
+     </button>
+     </div>
+   </nav>
+
+    <div class="container1">
+     <button type="button" class="btn btn-outline-secondary" >
+      <%= link_to "新規登録", users_new_path %>
+     </button>
+     <button type="button" class="btn btn-outline-secondary">
+      <%= link_to "ログイン", login_path %>
+      </div>
+     </button>
+
+
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <%= link_to "持ち物チェック"%>
+        </li>
+
+      </ul>
+    </nav>
+
     </div>
    </nav>
 
