@@ -26,13 +26,11 @@ ActiveRecord::Schema.define(version: 2022_07_26_092120) do
   create_table "users", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
-    t.string "password", null: false
-    t.string "password_confirmation", null: false
     t.string "password_digest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "remember_token"
-
+    t.string "#<ActiveRecord::ConnectionAdapters::SQLite3::TableDefinition:0x0000000004755270>"
   end
 
 end

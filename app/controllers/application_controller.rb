@@ -26,6 +26,8 @@ class ApplicationController < ActionController::Base
     @current_user.present?
   end
 
+  
+
   private
 
     def require_sign_in!

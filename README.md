@@ -1,24 +1,34 @@
-# README
+# tabicheck
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+旅の準備〜旅行後の思い出を共有するサイト。
+旅行先を他の人の思い出共有サイトから見つけるこができ、いざ旅に出る前の準備で忘れ物がないようにチェックできます。
+旅を思う存分楽しんだあとは、思い出を共有しましょう。
 
-Things you may want to cover:
+### サイトテーマ
+旅行を安心して楽しむ準備をして、その楽しみを共有する。
 
-* Ruby version
+### テーマを選んだ理由
+旅行が趣味です。
+旅行の行き先は決まっても具体的な予定は決めるのに時間がかかります。
+そんな時に、旅行共有サイトで旅行プランの参考にしたいと思いました。
+また、旅行先でメガネや充電器など１つは忘れ物をしてしまいます。
+忘れ物を予防するために、目的別や性別に合わせた持ち物チェックリストがあると便利だと考えました。
+さらに、旅行が終わったあとは、楽しかった思い出を共有しつつ誰かの旅行プランの参考になれればいいと思いました。
+旅行好きで、忘れ物をよくしてしまう方に使っていただけたら幸いです。
 
-* System dependencies
+### ターゲットユーザ
+旅行が好きな人。旅行のプランを考えている人。旅行に行く時忘れ物をしてしまう人。
+旅行の楽しい思い出を共有したい人。
 
-* Configuration
+### 主な利用シーン
+旅行を計画しているとき、旅行の準備をするとき、楽しかった旅行の思い出を共有したい時。
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
