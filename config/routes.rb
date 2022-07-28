@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   post    'login',   to: 'sessions#create'
   delete  'logout',  to: 'sessions#destroy'
   root "lists#new"
-  resources :lists, only: [:create, :show]
+  resources :lists, only: [:create, :show, :index]
 
 end

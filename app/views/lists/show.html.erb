@@ -1,15 +1,10 @@
 <div class="container">
- <div class="alert col-5 d-flex" role="alert">
+ <div class="alert alert-dark col-4 d-flex" role="alert">
     <h4><%= @list.place %>旅行の持ち物リスト</h4>
  </div>
 </div>
-<% if @list.errors.any? %>
-  <% @list.errors.full_messages.each do |message| %>
-    <%= message %>
-  <% end %>
- <% end %>
 
-<%= form_with model: @list, local: true do |f| %>
+<%= form_with model: @list, url: lists_path, local: true do |f| %>
  <div class="container">
   <div class="row" >
     <div class="col">
@@ -67,6 +62,10 @@
        </tr>
        <tr>
        <%= f.check_box :bag %>
+       <%= f.label :bag, "ハンカチ" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
        <%= f.label :bag, "常備薬" %><br>
        </tr>
        <tr>
@@ -81,6 +80,31 @@
        <%= f.check_box :bag %>
        <%= f.label :bag, "コンタクト" %><br>
        </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "絆創膏" %><br>
+       </tr>
+
+        <% if :weather == 2 %>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "折り畳み傘" %><br>
+       </tr>
+       <% elsif :weather == 3 %>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "雨具" %><br>
+       </tr>
+       <% else :weather == 4 %>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "雨具" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "カイロ" %><br>
+       </tr>
+       <% end %>
       </table>
     </div>
     <div class="col">
@@ -96,12 +120,18 @@
        </tr>
        <tr>
        <%= f.check_box :bag %>
+       <%= f.label :bag, "パジャマ" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
        <%= f.label :bag, "靴下" %><br>
        </tr>
-        <tr>
+       <% if :weather == 2 %>
+       <tr>
        <%= f.check_box :bag %>
-       <%= f.label :bag, "ハンカチ" %><br>
+       <%= f.label :bag, "防寒着" %><br>
        </tr>
+       <% end %>
       </table>
     </div>
   </div>
@@ -139,6 +169,7 @@
        <%= f.check_box :bag %>
        <%= f.label :bag, "日焼け止め" %><br>
        </tr>
+
       </table>
       <% end %>
     </div>
@@ -151,7 +182,7 @@
        <%= f.label :bag, "タオル" %><br>
        </tr>
       </table>
-      <% else :purpouse == 2 %>
+      <% elsif :purpouse == 2 %>
       <table>
        <tr>
        <%= f.check_box :bag %>
@@ -160,6 +191,42 @@
        <tr>
        <%= f.check_box :bag %>
        <%= f.label :bag, "タオル" %><br>
+       </tr>
+       <% elsif :purpouse == 3 %>
+      <table>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "テント" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "ハンマー" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "ランタン" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "テーブル・椅子" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "寝袋" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "調理器具" %><br>
+       </tr>
+       <% else :purpouse == 4 %>
+      <table>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "板・靴" %><br>
+       </tr>
+       <tr>
+       <%= f.check_box :bag %>
+       <%= f.label :bag, "ウエア" %><br>
        </tr>
       </table>
       <% end %>

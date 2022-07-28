@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tabicheck</title>
+     <title class="font">
+     tabicheck
+    </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
     <header>
-      <h1 class="headline"> Tabicheck </h1>
-    </header>
+    <div class="container">
+    <div class="row">
+    <div class="col-md-3 pull-right d-flex align-items-center">
+    <h3>tabicheck</h3>
+    </div>
+    <div class="col-md-9">
+
 
    <nav class="navbar navbar-light bg-white" >
-    
+    <% if signed_in? %>
     <div class="navbar-right">
     <button type="button" class="btn btn-outline-secondary" >
-      <%= link_to "作品一覧" %>
+      <%= link_to "投稿一覧" %>
      </button>
      <button type="button" class="btn btn-outline-secondary" >
-      <%= link_to "口コミ投稿"%>
+      <%= link_to "持ち物チェック"%>
+     </button>
+     <button type="button" class="btn btn-outline-secondary" >
+      <%= link_to "思い出共有"%>
      </button>
      <button type="button" class="btn btn-outline-secondary" >
       <%= link_to "ログアウト", logout_path, method: :delete %>
      </button>
      </div>
    </nav>
-
+    <% else %>
     <div class="container1">
      <button type="button" class="btn btn-outline-secondary" >
       <%= link_to "新規登録", users_new_path %>
@@ -37,20 +50,10 @@
       <%= link_to "ログイン", login_path %>
       </div>
      </button>
+    <% end %>
 
-
-    <nav>
-      <ul class="nav-list">
-        <li class="nav-list-item">
-          <%= link_to "持ち物チェック"%>
-        </li>
-
-      </ul>
-    </nav>
 
     </div>
-   </nav>
-
     </div>
 
     </header>

@@ -1,12 +1,12 @@
 <div class="container">
-<div class="alert col-5 d-flex" role="alert">
+<div class="alert alert-dark col-5 d-flex" role="alert">
  <strong>持ち物リストを作成</strong>
 </div>
 </div>
- 
+
  <div>
   <%= form_with model: @list, local: true do |f| %>
-  <table width="50%" class="table table-borderless">
+  <table width="70%" class="table table-borderless">
    <tbody>
    <tr>
     <td>行き先</td>
@@ -35,8 +35,18 @@
        </td>
        <td>
          <%= f.radio_button :purpouse, 2  %>
-         <%= f.label :purpouse,"プール" %><br>
+         <%= f.label :purpouse,"海・プール" %><br>
          <%= image_tag "pool.png" %>
+       </td>
+　　　<td>
+         <%= f.radio_button :purpouse, 3  %>
+         <%= f.label :purpouse,"キャンプ" %><br>
+         <%= image_tag "camp.png" %>
+       </td>
+       <td>
+         <%= f.radio_button :purpouse, 4  %>
+         <%= f.label :purpouse,"スキー・スノボ" %><br>
+         <%= image_tag "snow.png" %>
        </td>
    </tr>
 
