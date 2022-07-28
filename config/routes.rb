@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :memories, only: [:new, :create, :index, :show, :edit, :update, :destroy]
+  root 'homes#top'
 
   get 'users/new'
   post 'users/create'
@@ -7,7 +8,7 @@ Rails.application.routes.draw do
   get     'login',   to: 'sessions#new'
   post    'login',   to: 'sessions#create'
   delete  'logout',  to: 'sessions#destroy'
-  root "lists#new"
-  resources :lists, only: [:create, :show, :index]
+
+  resources :lists, only: [:new, :create, :show, :index]
 
 end
