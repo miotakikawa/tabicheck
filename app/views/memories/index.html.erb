@@ -32,13 +32,11 @@
 　 <% @memories.each do |memory|%>
 　 <tr>
 　  <td><span>
-　  <%=link_to user_path(memory.user_id) do %>
-　  <%= attachment_image_tag memory.user, :profile_image, :fill, 40, 40, fallback: "no_image.jpg", size:'40x40' %>
-　  <% end %>
+　  <%= memory.user.name %>
 　  </span></td>
-  　<td><span><%=link_to memory.title,memory_path(memory)%></span></td>
-  　<td><span><%=memory.image_tag%></span></td>
- 　  <td><span><%=memory.body%></span></td>
+  　<td><span><%= link_to memory.title,memory_path(memory) %></span></td>
+  　<td><span><%= memory.image_tag%></span></td>
+ 　  <td><span><%= memory.body %></span></td>
 　 </tr>
 　<%end%>
 　</tbody>

@@ -24,16 +24,16 @@
 
   		<%= form_with model: @memory, url:memory_path, local:true do |f| %>
   		<div class="form-group">
-        <label for="book_title">Title</label>
-        <%= f.text_field :title, class:"form-control book_title" %>
+        <label>Title</label>
+        <%= f.text_field :title %>
       </div>
       <div class="form-group">
-        <label for="book_title"></label>
-        <%= f.attachment_field :image_tag, class: "form-control-file"%>
+        <label></label>
+        <%= f.attachment_field :image_tag%>
       </div>
       <div class="form-group">
-        <label for="book_title">Opinion</label>
-        <%= f.text_area :body, class:"form-control book_title" %>
+        <label>Opinion</label>
+        <%= f.text_area :body %>
       </div>
       <div class="form-group">
       <%= f.submit 'Update Book', class: "btn btn-success" %>

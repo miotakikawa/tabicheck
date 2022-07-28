@@ -1,5 +1,4 @@
 class Memory < ApplicationRecord
-
   belongs_to :user
 
   attachment :image_tag
