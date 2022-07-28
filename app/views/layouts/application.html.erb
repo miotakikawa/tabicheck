@@ -28,13 +28,13 @@
     <% if signed_in? %>
     <div class="navbar-right">
     <button type="button" class="btn btn-outline-secondary" >
-      <%= link_to "投稿一覧" %>
+      <%= link_to "投稿一覧", memories_path %>
      </button>
      <button type="button" class="btn btn-outline-secondary" >
-      <%= link_to "持ち物チェック"%>
+      <%= link_to "持ち物チェック", root_path%>
      </button>
      <button type="button" class="btn btn-outline-secondary" >
-      <%= link_to "思い出共有"%>
+      <%= link_to "思い出投稿", new_memory_path %>
      </button>
      <button type="button" class="btn btn-outline-secondary" >
       <%= link_to "ログアウト", logout_path, method: :delete %>

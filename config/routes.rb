@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :memories, only: [:new, :create, :index, :show, :edit, :update, :destroy]
+
   get 'users/new'
   post 'users/create'
 

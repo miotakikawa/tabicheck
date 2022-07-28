@@ -1,0 +1,49 @@
+<div class="container px-5 px-sm-0">
+
+    <div id="error_explanation">
+        <% if @memory.errors.any? %>
+          <h3><%= @memory.errors.count %> error prohibited this obj from being saved:
+          <ul>
+            <li>
+            <% @memory.errors.full_messages.each do |message| %>
+              <%= message %>
+            <% end %>
+            </li>
+          </ul>
+        <% end %>
+      </div>
+
+
+
+  <div class="col-md-8 offset-md-1">
+  <h2>Memories</h2>
+　 <table class="table table-hover table-inverse">
+　 <thead>
+    <tr>
+      <th></th>
+      <th>Title</th>
+      <th></th>
+      <th>Opinion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+　 <% @memories.each do |memory|%>
+　 <tr>
+　  <td><span>
+　  <%=link_to user_path(memory.user_id) do %>
+　  <%= attachment_image_tag memory.user, :profile_image, :fill, 40, 40, fallback: "no_image.jpg", size:'40x40' %>
+　  <% end %>
+　  </span></td>
+  　<td><span><%=link_to memory.title,memory_path(memory)%></span></td>
+  　<td><span><%=memory.image_tag%></span></td>
+ 　  <td><span><%=memory.body%></span></td>
+　 </tr>
+　<%end%>
+　</tbody>
+
+　</table>
+  </div>
+ </div>
+</div>

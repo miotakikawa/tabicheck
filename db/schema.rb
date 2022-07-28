@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_26_092120) do
+ActiveRecord::Schema.define(version: 2022_07_28_070431) do
 
   create_table "lists", force: :cascade do |t|
     t.string "place"
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(version: 2022_07_26_092120) do
     t.integer "purpouse"
     t.integer "weather"
     t.string "bag"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "memories", force: :cascade do |t|
+    t.string "title"
+    t.string "image_tag"
+    t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
