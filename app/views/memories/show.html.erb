@@ -8,8 +8,8 @@
 　 <tr>
 　  <%=link_to @memory.user.name, user_path(@memory.user) %></td>
   　<td><span><%=link_to @memory.title,book_path(@memory)%></span></td>
-  　<td><span><%=@memory.image_tag%></span></td>
- 　  <td><span><%=@memory.body%></span></td>
+  　<td><span><%=@memory.image %></span></td>
+ 　  <td><span><%=@memory.body %></span></td>
  　<% if @memory.user == current_user %>
  　<td><span><%= link_to "Edit", edit_memory_path(@memory), class: "btn btn-sm btn-success" %></span>
  　</td>
