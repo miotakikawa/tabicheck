@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :memories
+
   has_secure_password validations: true
 
   validates :email, presence: true, uniqueness: true
@@ -11,5 +13,5 @@ class User < ApplicationRecord
     Digest::SHA256.hexdigest(token.to_s)
   end
 
-  has_many :memories, dependent: :destroy
+
 end

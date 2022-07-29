@@ -4,27 +4,26 @@
  </div>
 </div>
 
-<%= form_with model: @list, url: lists_path(@list), local: true do |f| %>
  <div class="container">
   <div class="row" >
     <div class="col">
       <strong>貴重品類</strong><br>
       <table>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "財布" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "財布" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "健康保険証" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "健康保険証" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "運転免許証" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "運転免許証" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "鍵" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "鍵" %><br>
        </tr>
       </table>
     </div>
@@ -32,77 +31,69 @@
       <strong>電子機器</strong><br>
       <table>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "携帯" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "携帯" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "携帯充電器" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "携帯充電器" %><br>
        </tr>
-       <!--<tr>-->
-       <!--<%= f.check_box :bag %>-->
-       <!--<%= f.label :bag, "運転免許証" %><br>-->
-       <!--</tr>-->
-       <!--<tr>-->
-       <!--<%= f.check_box :bag %>-->
-       <!--<%= f.label :bag, "鍵" %><br>-->
-       <!--</tr>-->
       </table>
     </div>
     <div class="col">
       <strong>日用品</strong><br>
       <table>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "マスク" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "マスク" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "ティッシュ" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "ティッシュ" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "ハンカチ" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "ハンカチ" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "常備薬" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "常備薬" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "消毒グッズ" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "消毒グッズ" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "メガネ" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "メガネ" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "コンタクト" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "コンタクト" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "絆創膏" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "絆創膏" %><br>
        </tr>
 
         <% if :weather == 2 %>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "折り畳み傘" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "折り畳み傘" %><br>
        </tr>
        <% elsif :weather == 3 %>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "雨具" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "雨具" %><br>
        </tr>
        <% else :weather == 4 %>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "雨具" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "雨具" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "カイロ" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "カイロ" %><br>
        </tr>
        <% end %>
       </table>
@@ -111,25 +102,25 @@
       <strong><%= @list.date %>泊分の衣類</strong><br>
       <table>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "下着" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "下着" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "着替え（上下）" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "着替え（上下）" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "パジャマ" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "パジャマ" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "靴下" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "靴下" %><br>
        </tr>
        <% if :weather == 2 %>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "防寒着" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "防寒着" %><br>
        </tr>
        <% end %>
       </table>
@@ -143,31 +134,31 @@
       <% if :gender == 1 %>
       <table>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "髭剃り" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "髭剃り" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "歯ブラシ" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "歯ブラシ" %><br>
        </tr>
       </table>
       <% else :gender == 2 %>
        <table>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "メイク用品" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "メイク用品" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "歯ブラシ" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "歯ブラシ" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "化粧水・乳液" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "化粧水・乳液" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "日焼け止め" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "日焼け止め" %><br>
        </tr>
 
       </table>
@@ -178,55 +169,55 @@
       <% if :purpouse == 1 %>
       <table>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "タオル" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "タオル" %><br>
        </tr>
       </table>
       <% elsif :purpouse == 2 %>
       <table>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "水着" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "水着" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "タオル" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "タオル" %><br>
        </tr>
        <% elsif :purpouse == 3 %>
       <table>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "テント" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "テント" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "ハンマー" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "ハンマー" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "ランタン" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "ランタン" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "テーブル・椅子" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "テーブル・椅子" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "寝袋" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "寝袋" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "調理器具" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "調理器具" %><br>
        </tr>
        <% else :purpouse == 4 %>
       <table>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "板・靴" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "板・靴" %><br>
        </tr>
        <tr>
-       <%= f.check_box :bag %>
-       <%= f.label :bag, "ウエア" %><br>
+       <%= check_box_tag :bag %>
+       <%= label_tag :bag, "ウエア" %><br>
        </tr>
       </table>
       <% end %>
@@ -244,6 +235,6 @@
   </div><br><br>
  </div>
   <div class="text-center">
-   <span><%= f.submit "準備完了", class:"btn btn-success" %></span>
+   <span><%= link_to "準備完了", lists_path, class:"btn btn-success" %></span>
    </div>
- <% end %>
+

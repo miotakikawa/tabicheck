@@ -45,12 +45,12 @@ class MemoriesController < ApplicationController
   def destroy
     @memory = Memory.find(params[:id])
     @memory.destroy
-    redirect_to books_path
+    redirect_to memories_path
   end
 
   private
 
   def memory_params
-    params.require(:memory).permit(:title, :body, :image)
+    params.require(:memory).permit(:title, :image, :body)
   end
 end
