@@ -1,23 +1,24 @@
 <div class="container">
 <div class="alert alert-dark col-5 d-flex" role="alert">
-  <strong>memory detail</strong>
+  <strong><%= @memory.user.name %>さんの思い出詳細 </strong>
+</div>
+ </div>
   <table class="table">
   <tbody>
   <tr>
 　 <tbody>
 　 <tr>
-　  <%=link_to @memory.user.name, user_path(@memory.user) %></td>
-  　<td><span><%=link_to @memory.title,book_path(@memory)%></span></td>
-  　<td><span><%=@memory.image %></span></td>
+　  <td><%= @memory.user.name %></td>
+  　<td><span><%=link_to @memory.title,memory_path(@memory)%></span></td>
+  　<td><span><%= attachment_image_tag @memory, :image, :fill, 100, 100 %></span></td>
  　  <td><span><%=@memory.body %></span></td>
- 　<% if @memory.user == current_user %>
+   <% if @memory.user == @current_user %>
  　<td><span><%= link_to "Edit", edit_memory_path(@memory), class: "btn btn-sm btn-success" %></span>
  　</td>
  　 <td><span><%= link_to" Destroy", memory_path(@memory), method: :delete, class: "btn btn-sm btn-danger" %></span></td>
- 　<%end%>
+   <% end %>
 　</tr>
 　</tbody>
   </table>
-  </div>
- </div>
+
 
