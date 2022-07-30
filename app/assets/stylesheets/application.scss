@@ -14,3 +14,11 @@
  *= require_self
  */
  @import "bootstrap";
+
+ @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap');
+
+ .tabi{
+  font-size: xx-large;
+  align-items: flex-end;
+  font-family: 'Merriweather', serif;
+ }

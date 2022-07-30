@@ -18,12 +18,11 @@
     <header>
     <div class="container">
     <div class="row">
-    <div class="col-md-6 pull-right d-flex align-items-center">
-    <h3>tabicheck</h3>
+    <div class="col-sm-4 pull-right d-flex align-items-center">
+    <div class="tabi">tabicheck</div>
     </div>
 
-
-
+   <div class="col-sm-8 d-flex flex-row-reverse bd-highlight">
    <nav class="navbar navbar-light bg-white" >
     <% if signed_in? %>
     <div class="navbar-right">
@@ -55,13 +54,16 @@
 
     </div>
     </div>
+    </div>
 
-    </header>
+    </header><br>
 
     <main>
     <div class="container">
 
+
       <%= yield %>
+
     </div>
   </main>
   </body>
